@@ -1,0 +1,40 @@
+<%- include("partials/header.ejs") %>
+
+<header>
+  <img src="images/sun_169367.png" id="sun-images" />
+  <h1>Weather Daily</h1>
+</header>
+
+<main>
+  <form method="post" action="/submit" class="form-container">
+    <input type="text" id="city" name="city" placeholder="City name" />
+    <button type="submit">submit</button>
+  </form>
+
+  <% if (error) { %>
+  <p class="error-message" style="color: red; text-align: center">
+    <%= error %>
+  </p>
+  <% } %>
+  
+  <% if (locals.location) {%>
+  <div class="weather-container">
+    <div class="name">
+      <h2 class="text"><%= location.name %></h2>
+    </div>
+    <div class="weather-icon">
+      <img
+        src="https://openweathermap.org/img/wn/<%= location.weather[0].icon %>@2x.png"
+      />
+    </div>
+    <div class="weather">
+      <h2 class="text"><%=location.weather[0].main %></h2>
+    </div>
+    <div class="temp">
+      <h2 class="text"><%= Math.round(location.main.temp-273) + " °C" %></h2>
+    </div>
+  </div>
+  <% } %>
+</main>
+
+<%- include("partials/footer.ejs") %>

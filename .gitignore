@@ -1,0 +1,34 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# dotenv files
+.env
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# Logs
+logs
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+
+# Build
+dist/
+build/
+
+# Coverage reports
+coverage/
+
+# Temp files
+tmp/
+temp/

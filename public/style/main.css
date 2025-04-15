@@ -1,0 +1,125 @@
+/* GLOBAL */
+html {
+  height: 100%;
+  margin: 0px;
+}
+
+body {
+  margin: 0px;
+  background: linear-gradient(
+    109.6deg,
+    rgb(104, 183, 249) 31.3%,
+    rgb(176, 248, 200) 100.2%
+  );
+  height: 100%;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  background-color: whitesmoke;
+}
+#sun-images {
+  padding: 20px;
+  height: 35px;
+}
+h1 {
+  margin: 0px;
+  color: #62a1c7;
+}
+
+/* MAIN */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+/* FORM */
+.form-container {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(215, 223, 252) 0%,
+    rgb(255, 255, 255) 0%,
+    rgb(215, 223, 252) 84%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 5px 5px 2px #999;
+}
+
+.form-container * {
+  margin: 10px;
+}
+input::placeholder {
+  font-size: 14px;
+}
+button {
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 10px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4caeeb;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 3px #999;
+}
+button:hover {
+  background-color: #079bf7;
+}
+button:active {
+  background-color: #066cac;
+  box-shadow: 0 0.5px #666;
+  transform: translateY(4px);
+}
+
+/* weather data display */
+.weather-container {
+  display: grid;
+  grid-template: repeat(2, auto) / 1fr 1fr 1fr;
+  background-color: #4caeeb;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 5px 5px 2px #999;
+}
+.weather-container > *{
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.name {
+  grid-column: span 3;
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: whitesmoke;
+  color: #62a1c7;
+}
+
+footer p {
+  margin: 0px;
+}
